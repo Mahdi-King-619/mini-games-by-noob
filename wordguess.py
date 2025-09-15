@@ -1,5 +1,6 @@
 import tkinter as tk
 import random
+
 words = [
     "RANGE","TUPLE","FRUIT","MANGO","PRINT","PLACE","INPUT",
     "CRANE","STORM","FLUID","CHARM","BLAST","QUOTE","VEXIL",
@@ -11,16 +12,20 @@ words = [
     "CLOUD","FRAME","SHOCK","BLEND","WHISK","TANGO","MARCH",
     "DRIVE","SCOUT","QUEST","LOVER","PAINT","WHEAT","CHIEF"
 ]
+
 word = random.choice(words)
+
+
 x = 0
 r = 0
 called_letter = []
 progress = ["_"] * 5
+
 def guess_letter():
     global x, r
     letter = entry.get().upper()
     entry.delete(0, tk.END)
-  
+
     if not letter or len(letter) != 1:
         status_label.config(text="Enter ONE letter!")
         return
