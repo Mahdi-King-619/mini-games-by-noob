@@ -1,5 +1,6 @@
 import tkinter as tk
 import random
+
 words = [
     "RANGE","TUPLE","FRUIT","MANGO","PRINT","PLACE","INPUT",
     "CRANE","STORM","FLUID","CHARM","BLAST","QUOTE","VEXIL",
@@ -11,16 +12,20 @@ words = [
     "CLOUD","FRAME","SHOCK","BLEND","WHISK","TANGO","MARCH",
     "DRIVE","SCOUT","QUEST","LOVER","PAINT","WHEAT","CHIEF"
 ]
+
 word = random.choice(words)
+
+
 x = 0
 r = 0
 called_letter = []
 progress = ["_"] * 5
+
 def guess_letter():
     global x, r
     letter = entry.get().upper()
     entry.delete(0, tk.END)
-  
+
     if not letter or len(letter) != 1:
         status_label.config(text="Enter ONE letter!")
         return
@@ -60,12 +65,12 @@ root.title("Word Guessing Game")
 intro_text = (
     "Welcome to this tricky word guessing game.\n"
     "Each word will be 5 letters and each letter only occurs once.\n"
-    "You have 10 guesses to find all 5 letters. Pretty tricky, right?\n"
+    "You have 12 guesses to find all 5 letters. Pretty tricky, right?\n"
     "The computer has chosen a word from our dictionary below.\n\n"
     "Words: " + ", ".join(words)
 )
 
-intro_label = tk.Label(root, text=intro_text, wraplength=400, justify="left", fg="darkblue")
+intro_label = tk.Label(root, text=intro_text, wraplength=400, justify="left", fg="DarkGreen")
 intro_label.pack(pady=10)
 
 progress_label = tk.Label(root, text=" ".join(progress), font=("Arial", 20))
@@ -78,10 +83,10 @@ entry.focus()
 guess_btn = tk.Button(root, text="Guess", command=guess_letter)
 guess_btn.pack(pady=5)
 
-status_label = tk.Label(root, text="", fg="blue")
+status_label = tk.Label(root, text="", fg="black")
 status_label.pack()
 
-guesses_label = tk.Label(root, text="Guesses left: 10")
+guesses_label = tk.Label(root, text="Guesses left: 12")
 guesses_label.pack()
 
 found_label = tk.Label(root, text="Letters found: 0/5")
