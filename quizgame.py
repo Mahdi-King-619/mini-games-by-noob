@@ -12,7 +12,7 @@ options=[("A.Dr. Muhammad Yunus","B.Dr. Muhammad Yusuf","C.Dr.Muhammad Mahdi","D
          ("A.Venus","B.Neptune","C.Saturn","D.Earth"),
          ("A.x²+y²+z²=1","B.x³+y³+z³=27","C.x²-y³+z²=4","D.None Of these"),
          ("A.Beyonce","B.DJ Snake","C.Eminem","D.Bongoboltu"),]
-answers=["A","D","A","A","B","C"]
+answers=["A","D","A","A","A","C"]
 guesses=[]
 score=0
 question_num=0
